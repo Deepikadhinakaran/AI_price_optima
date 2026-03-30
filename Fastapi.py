@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function App() {
-  const API_BASE = "http://127.0.0.1:80"; // your FastAPI URL
+  const API_BASE = process.env.REACT_APP_API_URL || "http://127.0.0.1:80";
 
   const [record, setRecord] = useState({
     Time_of_Booking: "Afternoon",
